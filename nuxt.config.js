@@ -1,6 +1,13 @@
+const routerBase = process.env.DEPLOY_ENV === 'prod' ? '/toss/' : '/';
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
+  router: {
+    mode: 'hash',
+    base: routerBase,
+    routerNameSplitter: "/",
+    middleware: ['router']
+  },
   env: {
     baseUrl: 'http://localhost:8080/api/v1',
     localUrl: 'http://localhost:8080/api/v1'
