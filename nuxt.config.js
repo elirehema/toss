@@ -71,6 +71,9 @@ export default {
       lang: 'en'
     }
   },
+  icon: {
+    iconSrc: '/static/icon.png'
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
